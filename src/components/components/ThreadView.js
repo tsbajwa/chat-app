@@ -17,9 +17,17 @@ export default class ThreadView extends React.Component {
       messages,
     })
   }
+
+  handleDeleteClick = (index) => {
+    const messages = [...this.state.messages.slice(0, index), ...this.state.messages.slice(index +1, this.state.messages.length)]
+    this.setState({
+      messages,
+    })
+  }
+
   render() {
     const messages = this.state.messages.map((message, index) => (
-      <li key={index} >{message}</li>
+      <li key={index} onClick={() => this.handleDeleteClick(index)}>{message}</li>
     ))
 
     return (
