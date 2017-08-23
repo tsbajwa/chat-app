@@ -8,7 +8,10 @@ export default class TextFieldSubmit extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Handle Submit function')
+    this.props.onSubmit(this.state.value);
+    this.setState({
+      value: '',
+    })
   }
 
   handleChange = (e) => {
