@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import TextFieldSubmit from './components/components/TextFieldSubmit';
+import ThreadView from './components/components/ThreadView';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <TextFieldSubmit />
+        <ThreadView />
       </div>
     );
   }
