@@ -24,11 +24,14 @@ export default class ThreadView extends React.Component {
     })
   }
 
-  handleDeleteClick = (id) => {
+  deleteMessage = (id) => {
     const messages = this.state.messages.filter((m) => m.id !== id)
     this.setState({
       messages,
     })
+  }
+  handleDeleteClick = (id) => {
+    this.deleteMessage(id);
   }
 
   render() {
