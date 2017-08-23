@@ -1,10 +1,11 @@
 import React from 'react';
 import TextFieldSubmit from './TextFieldSubmit';
+import uuidv4 from 'uuid/v4';
 
 export default class ThreadView extends React.Component {
 
   state = {
-    messages: ['This is the first message', 'Another message mate']
+    messages: []
   }
 
   handleSubmit = (message) => {
@@ -12,22 +13,27 @@ export default class ThreadView extends React.Component {
   }
 
   addMessage = (message) => {
-    const messages = [...this.state.messages, message];
+    const newMessage = {
+      text: message,
+      id:uuidv4(),
+      time: Date.now()
+    }
+    const messages = [...this.state.messages, newMessage];
     this.setState({
       messages,
     })
   }
 
-  handleDeleteClick = (index) => {
-    const messages = [...this.state.messages.slice(0, index), ...this.state.messages.slice(index +1, this.state.messages.length)]
+  handleDeleteClick = (id) => {
+    const messages = this.state.messages.filter((m) => m.id !== id)
     this.setState({
       messages,
     })
   }
 
   render() {
-    const messages = this.state.messages.map((message, index) => (
-      <li key={index} onClick={() => this.handleDeleteClick(index)}>{message}</li>
+    const messages = this.state.messages.map((message) => (
+      <li key={message.id} onClick={() => this.handleDeleteClick(message.id)}>{message.text} @{message.time}</li>
     ))
 
     return (
