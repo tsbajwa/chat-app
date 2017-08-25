@@ -65,9 +65,6 @@ function findThreadIndex(threads, action) {
   }
 }
 
-
-
-
 function messages(state = [], action) {
   // state = state.threads[i].messages
   switch (action.type) {
