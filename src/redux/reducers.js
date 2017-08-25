@@ -1,25 +1,3 @@
-//Designing the state shape
-
-/* 
-state = {
-  activeThreadId: ''
-  threads: [
-    {
-      threadId: ''
-      name:
-      messages: [
-        {
-          messageId: ''
-          message:
-          timeStamp:ß
-
-        }
-      ]
-    }
-  ]
-}
-*/
-
 import { combineReducers } from 'redux';
 import uuid from 'uuid';
 import { SET_ACTIVETHREAD, ADD_MESSAGE,  DELETE_MESSAGE } from '../redux/actionTypes';
@@ -54,6 +32,7 @@ function activeThreadId(state = initactive, action) {
 }
 
 function threads(state = initThread, action) {
+  //state = state.threads
   switch (action.type) {
     case ADD_MESSAGE:
     case DELETE_MESSAGE: {
@@ -90,6 +69,7 @@ function findThreadIndex(threads, action) {
 
 
 function messages(state = [], action) {
+  // state = state.threads[i].messages
   switch (action.type) {
     case ADD_MESSAGE: {
       const newMessage = {
