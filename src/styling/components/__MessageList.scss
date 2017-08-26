@@ -1,0 +1,23 @@
+.messageList {
+  // Trick to have scroll always at bottom. Would need to reverse order messages are added to make it work
+  // i.e push new messages to front of array
+  // display: flex;
+  // flex-direction: column-reverse;
+  list-style: none;
+  margin: 0;
+  padding:5px 0px 0px 0px;
+  min-height: 100px;
+  overflow-wrap: break-word;
+  overflow-y: auto;
+  max-height: 95vh;
+  min-width: 300px;
+
+  &__message {
+    text-align: left;
+  }
+}
+
+.messageListContainer {
+  max-width: 300px;
+  max-height: 100vh;
+}

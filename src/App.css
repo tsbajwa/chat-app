@@ -7,4 +7,38 @@ body {
 .App {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  max-width: 500px; }
+
+#root {
+  display: flex;
+  justify-content: center; }
+
+.tabContainer {
+  display: flex;
+  width: 100%; }
+  .tabContainer__tab {
+    border: none;
+    border-left: 1px solid white;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 15px 20px 15px 20px;
+    font-size: 16px;
+    background-color: #00bcd4;
+    color: white; }
+
+.messageList {
+  list-style: none;
+  margin: 0;
+  padding: 5px 0px 0px 0px;
+  min-height: 100px;
+  overflow-wrap: break-word;
+  overflow-y: auto;
+  max-height: 95vh;
+  min-width: 300px; }
+  .messageList__message {
+    text-align: left; }
+
+.messageListContainer {
+  max-width: 300px;
+  max-height: 100vh; }
