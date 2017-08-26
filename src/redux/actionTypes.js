@@ -1,6 +1,7 @@
 export const ADD_MESSAGE = 'ADD_MESSAGE';
 export const DELETE_MESSAGE = 'DELETE_MESSAGE';
 export const SET_ACTIVETHREAD = 'ACTIVE_THREAD';
+export const CREATE_THREAD ='CREATE_THREAD';
 
 export function addMessage(message, id) {
   return {
@@ -21,5 +22,12 @@ export function setActiveThread(id) {
   return {
     type: SET_ACTIVETHREAD,
     id,
+  }
+}
+
+export function createThread(title) {
+  return {
+    type: CREATE_THREAD,
+    title,
   }
 }

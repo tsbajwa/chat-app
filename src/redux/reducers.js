@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import uuid from 'uuid';
-import { SET_ACTIVETHREAD, ADD_MESSAGE,  DELETE_MESSAGE } from '../redux/actionTypes';
+import { SET_ACTIVETHREAD, ADD_MESSAGE,  DELETE_MESSAGE, CREATE_THREAD } from '../redux/actionTypes';
 
 
 const initactive = '1-fca2';
@@ -44,6 +44,14 @@ function threads(state = initThread, action) {
         newThread,
         ...state.slice(threadIndex + 1, state.length)
       ]
+    }
+    case CREATE_THREAD: {
+      const newThread = {
+        id: uuid.v4(),
+        title: action.title,
+        messages: []
+      }
+      return [...state, newThread]
     }
     default: {
       return state
