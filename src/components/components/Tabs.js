@@ -7,7 +7,7 @@ export default function Tabs(props) {
           <button
             key={t.id} 
             onClick={() => props.onClick(t.id)}
-            className={t.active ? 'tabContainer__tab': 'tabContainer__tab' }
+            className={t.active ? 'tabContainer__tab--active': 'tabContainer__tab' }
             >{t.title}</button>
           ))
         }
