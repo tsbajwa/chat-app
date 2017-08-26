@@ -1,0 +1,21 @@
+.TextFieldSubmit {
+  display: flex;
+  min-width: 300px;
+  
+
+  &__textInput {
+    min-width: 80%;
+    padding: 0.3em 0.2em;
+    font-size: 12px;
+    box-sizing: border-box;
+  }
+
+  &__submit {
+    color: white;
+    background-color: #00E528;
+    border: none;
+    font-size: 14px;
+    min-width: 20%;
+    box-sizing: border-box;
+  }
+}

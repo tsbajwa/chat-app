@@ -21,9 +21,9 @@ export default class TextFieldSubmit extends React.Component {
   }
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input type='text' onChange={this.handleChange} value={this.state.value}/>
-        <input type='submit' value='Send Message'/>
+      <form className='TextFieldSubmit' onSubmit={this.handleSubmit}>
+        <input className='TextFieldSubmit__textInput' type='text' onChange={this.handleChange} value={this.state.value}/>
+        <input className='TextFieldSubmit__submit' type='submit' value='Send'/>
       </form>
     )
   }
