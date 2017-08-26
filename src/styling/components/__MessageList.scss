@@ -11,9 +11,16 @@
   overflow-y: auto;
   max-height: 95vh;
   min-width: 300px;
+  font-size: 14px;
 
   &__message {
     text-align: left;
+
+    &-span {
+      font-size: 9px;
+      color: gray;
+      padding-left: 5px;
+    }
   }
 }
 

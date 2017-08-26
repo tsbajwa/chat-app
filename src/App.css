@@ -35,9 +35,14 @@ body {
   overflow-wrap: break-word;
   overflow-y: auto;
   max-height: 95vh;
-  min-width: 300px; }
+  min-width: 300px;
+  font-size: 14px; }
   .messageList__message {
     text-align: left; }
+    .messageList__message-span {
+      font-size: 9px;
+      color: gray;
+      padding-left: 5px; }
 
 .messageListContainer {
   max-width: 300px;
