@@ -1,6 +1,6 @@
 ## Chat App
 
-Made with React and React-Redux
+A simple Chat app which was made with React and React-Redux
 
 
 ### To use application:
@@ -13,4 +13,4 @@ Made with React and React-Redux
 
 #### Left to do
 
-* CSS styling to be added still
+* Minor css styling fixes
